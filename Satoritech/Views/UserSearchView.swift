@@ -121,10 +121,6 @@ struct UserRowView: View {
     .background(
       RoundedRectangle(cornerRadius: 16, style: .continuous)
         .fill(.regularMaterial)
-        .shadow(color: colorScheme == .dark
-                ? Color.white.opacity(0.08)
-                : Color.black.opacity(0.05),
-                radius: 4, x: 0, y: 2)
     )
     .padding(.horizontal)
     .padding(.vertical, 4)

@@ -40,7 +40,7 @@ struct UserDetailView: View {
         .padding()
         .background(.regularMaterial)
         .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-        .shadow(radius: 4)
+        .shadow(radius: 1)
         .padding(.horizontal)
         
         Spacer(minLength: 60)
