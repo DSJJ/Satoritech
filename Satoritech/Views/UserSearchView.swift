@@ -19,6 +19,7 @@ struct UserSearchView: View {
             .padding(.leading)
           
           Button("Buscar") {
+            hideKeyboard()
             viewModel.search()
           }
           .buttonStyle(.borderedProminent)
@@ -90,6 +91,8 @@ struct MessageView: View {
 struct UserRowView: View {
   let user: User
   
+  @Environment(\.colorScheme) private var colorScheme
+  
   var body: some View {
     HStack(spacing: 16) {
       Image(systemName: "figure.wave.circle.fill")
@@ -117,11 +120,20 @@ struct UserRowView: View {
     .padding()
     .background(
       RoundedRectangle(cornerRadius: 16, style: .continuous)
-        .fill(.background)
-        .shadow(color: .black.opacity(0.2), radius: 4, x: 0, y: 2)
+        .fill(.regularMaterial)
+        .shadow(color: colorScheme == .dark
+                ? Color.white.opacity(0.08)
+                : Color.black.opacity(0.05),
+                radius: 4, x: 0, y: 2)
     )
     .padding(.horizontal)
     .padding(.vertical, 4)
+  }
+}
+
+extension View {
+  func hideKeyboard() {
+    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
   }
 }
 
@@ -168,5 +180,3 @@ struct UserRowView: View {
     return vm
   }())
 }
-
-
