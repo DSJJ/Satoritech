@@ -28,6 +28,7 @@ Una aplicación iOS construida con **SwiftUI**, **Combine** y arquitectura **MVV
 ## 📱 Evidencias
 
 ![Jul-17-2025 2-47-31 p m](https://github.com/user-attachments/assets/3b4bef40-9183-4ec0-b6d4-927b6117f6d4)
+![Jul-17-2025 3-09-44 p m](https://github.com/user-attachments/assets/afcc7077-a534-40cd-a598-3b0e2304311c)
 
 
 <img width="464" height="930" alt="Captura de pantalla 2025-07-17 a la(s) 2 48 46 p m" src="https://github.com/user-attachments/assets/68a7d5ce-d368-48a9-8a60-cef0ef04dff8" />
